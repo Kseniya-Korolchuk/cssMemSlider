@@ -55,33 +55,40 @@ img {
 .text__wrapper {
   display: flex;
   flex-direction: column;
-  height: 1.5rem;
+  height: 5rem;
   overflow: hidden;
 }
 
 .slider__text {
-
+min-height: 5rem;
 }
 
 .controls__wrapper {
   display: flex;
-  gap: 1rem;
 }
 
 .control {
-  width: 1.5rem;
-  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 3rem;
+  cursor: pointer;
 }
 
 .control__btn{
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: rgb(120, 93, 148);
+  border: 0.15rem solid rgb(120, 93, 148);
   border-radius: 0.75rem;
-  cursor: pointer;
+ 
 }
 
-.radio {
-  
+.control:hover .control__btn {
+  box-shadow: 0 0 0.4rem rgba(255, 255, 255, 0.8);
+}
+
+.control:active .control__btn {
+  background-color: rgb(120, 93, 148);
 }
