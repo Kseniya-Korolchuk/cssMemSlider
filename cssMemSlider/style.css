@@ -14,7 +14,7 @@ html, body {
 
 .wrapper {
  max-width: 1200px;
- min-height: 100%;
+ max-height: 100%;
  margin: 0 auto;
 }
 
@@ -34,7 +34,7 @@ html, body {
 
 @media (max-width: 900px) {
   .main-content {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -45,9 +45,9 @@ input {
 .slider__wrapper {
   display: flex;
   flex-direction: row;
-  width: 70rem;
-  height: 45rem;
-  margin: 3rem 10rem 0;
+  width: 50rem;
+  height: 35rem;
+  margin: 0 10rem;
   overflow: hidden;
 }
 
@@ -60,20 +60,21 @@ input {
 }
 
 img {
-  width: 70rem;
+  width: 50rem;
 }
 
 
 .slider__panel-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  width: 70rem;
+  width: 50rem;
+  align-items: flex-start;
 }
 
 @media (max-width: 767px) {
   .slider__panel-wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr;
   }
 }
 
@@ -87,7 +88,8 @@ img {
 
 @media (max-width: 900px) {
   .slider__text-wrapper {
-    height: rem;
+    height: 7rem;
+    margin-top: 1rem;
   }
 }
 
@@ -101,18 +103,19 @@ img {
   min-width:100%;
   min-height: 5rem;
   transition: 0.7s;
-  padding-top: 0.4rem ;
 }
 
 .slider__controls-wrapper {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
   width: 100%;
 }
 
 @media (max-width: 767px) {
   .slider__controls-wrapper {
     justify-content: center;
+    margin-top: 1rem;
   }
 }
 
@@ -131,6 +134,14 @@ img {
   height: 1.5rem;
   border: 0.15rem solid rgb(120, 93, 148);
   border-radius: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .control__btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  }
 }
 
 .control:hover .control__btn {
