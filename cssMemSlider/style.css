@@ -3,9 +3,9 @@
 }
 
 html, body {
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
   font-family: 'ARIAL', sans-serif;
   background-color: rgb(12, 21, 29);
   color: bisque;
@@ -20,6 +20,7 @@ html, body {
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   padding: 5rem 0;
   display: flex;
@@ -40,31 +41,55 @@ input {
   overflow: hidden;
 }
 
+@media (max-width: 1024px) {
 
+}
+
+@media (max-width: 767px) {
+  
+}
+
+.slide {
+  width: 100%;
+  transition: 0.7s;
+}
 
 img {
   width: 70rem;
 }
 
-.slider-panel__wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+@media (max-width: 1024px) {
+
 }
 
-.text__wrapper {
+@media (max-width: 767px) {
+  
+}
+
+.slider__panel-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem 4rem;
+}
+
+.slider__text-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
   height: 5rem;
   overflow: hidden;
 }
 
 .slider__text {
-min-height: 5rem;
+  min-width:100%;
+  min-height: 5rem;
+  transition: 0.7s;
 }
 
-.controls__wrapper {
+.slider__controls-wrapper {
   display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .control {
@@ -82,7 +107,6 @@ min-height: 5rem;
   height: 1.5rem;
   border: 0.15rem solid rgb(120, 93, 148);
   border-radius: 0.75rem;
- 
 }
 
 .control:hover .control__btn {
@@ -90,5 +114,38 @@ min-height: 5rem;
 }
 
 .control:active .control__btn {
+  background-color: rgb(120, 93, 148);
+}
+
+input#radio1:checked ~ .slider__wrapper > .slide,
+input#radio1:checked ~ .slider__panel-wrapper > .slider__text-wrapper > .slider__text {
+  transform: translate(0);
+}
+
+input#radio2:checked ~ .slider__wrapper > .slide,
+input#radio2:checked ~ .slider__panel-wrapper > .slider__text-wrapper > .slider__text {
+  transform: translate(-100%);
+}
+
+input#radio3:checked ~ .slider__wrapper > .slide,
+input#radio3:checked ~ .slider__panel-wrapper > .slider__text-wrapper > .slider__text {
+  transform: translate(-200%);
+}
+
+input#radio4:checked ~ .slider__wrapper > .slide,
+input#radio4:checked ~ .slider__panel-wrapper > .slider__text-wrapper > .slider__text {
+  transform: translate(-300%);
+}
+
+input#radio5:checked ~ .slider__wrapper > .slide,
+input#radio5:checked ~ .slider__panel-wrapper > .slider__text-wrapper > .slider__text {
+  transform: translate(-400%);
+}
+
+input#radio1:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio1"] > .control__btn,
+input#radio2:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio2"] > .control__btn,
+input#radio3:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio3"] > .control__btn,
+input#radio4:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio4"] > .control__btn,
+input#radio5:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio5"] > .control__btn {
   background-color: rgb(120, 93, 148);
 }
