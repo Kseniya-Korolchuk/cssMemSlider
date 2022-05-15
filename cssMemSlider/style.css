@@ -16,7 +16,6 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*max-width: 75rem;*/
   margin: 0 auto;
 }
 
@@ -174,7 +173,6 @@ img {
 @media (max-width: 767px) {
   .slider__controls-wrapper {
     justify-content: center;
-    /*margin-top: 1rem;*/
   }
 }
 
