@@ -147,7 +147,7 @@ html, body {
 }
 
 .control:active .control__btn {
-  background-color: rgb(255, 252, 61);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 input#radio1:checked ~ .slider__wrapper > .slide,
