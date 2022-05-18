@@ -175,10 +175,19 @@ input#radio5:checked ~ .slider__panel-wrapper > .slider__text-wrapper > .slider_
   transform: translate(-400%);
 }
 
+
 input#radio1:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio1"] > .control__btn,
 input#radio2:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio2"] > .control__btn,
 input#radio3:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio3"] > .control__btn,
 input#radio4:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio4"] > .control__btn,
 input#radio5:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio5"] > .control__btn {
   background-color: rgb(255, 252, 61);
+}
+
+input#radio1:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio1"] > .control__btn:active,
+input#radio2:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio2"] > .control__btn:active,
+input#radio3:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio3"] > .control__btn:active,
+input#radio4:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio4"] > .control__btn:active,
+input#radio5:checked ~ .slider__panel-wrapper> .slider__controls-wrapper > label[for="radio5"] > .control__btn:active {
+  background-color: rgba(255, 255, 255, 0.8);
 }
